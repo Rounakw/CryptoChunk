@@ -106,8 +106,6 @@ function Navbar() {
 
         </div>
       </div>
-
-      fdbfdbr
     </div>
 
 
