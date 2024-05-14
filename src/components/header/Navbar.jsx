@@ -53,7 +53,7 @@ function Navbar() {
   }
 
   return (
-    <div className='flex bg-slate-200 dark:bg-gray-700 items-center justify-between px-10 py-4'>
+    <div className='flex bg-slate-200 dark:bg-gray-700 items-center justify-between px-10 py-4 dark:border-b-[1px] dark:border-b-white'>
       <Logo />
 
       <div className="flex max-2xl:gap-6 max-lg:gap-[15px] dark:text-white max-md:hidden">
@@ -86,7 +86,7 @@ function Navbar() {
 
 
       {/* hamburger slider */}
-      <div className={`${show ? 'transition-transform translate-y-[0px] ease-linear duration-500' : 'transition-transform translate-y-[-100%] ease-linear duration-500'} md:hidden absolute flex-col bg-slate-200 w-full top-0 left-0 dark:bg-gray-700 dark:text-white`}>
+      <div className={`${show ? 'transition-transform z-50 translate-y-[0px] ease-linear duration-500' : 'transition-transform z-50  translate-y-[-100%] ease-linear duration-500'} md:hidden absolute flex-col bg-slate-200 w-full top-0 left-0 dark:bg-gray-700 dark:text-white`}>
         <div className='flex items-center justify-between px-10 py-4 border-b-[0.5px] bg-slate-300 dark:bg-slate-800 border-black dark:border-white'>
           <span className='sm:hidden'>
             <ToogleBtn onClick={handleOnClickThemeChange} />
