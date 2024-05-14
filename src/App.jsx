@@ -1,11 +1,12 @@
 import './App.css'
-import { HeroSection, Navbar } from './components'
+import { HeroSection, Navbar, TrendingCoins } from './components'
 function App() {
 
   return (
     <>
       <Navbar/>
       <HeroSection/>
+      <TrendingCoins/>
     </>
   )
 }

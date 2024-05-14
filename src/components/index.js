@@ -4,5 +4,6 @@ import Input from "./inputField/Input";
 import Logo from "./logo/Logo";
 import Button from "./button/Button";
 import HeroSection from "./herosection/HeroSection";
+import TrendingCoins from "./trendingcoins/TrendingCoins";
 
-export { Navbar, ToogleBtn, Input, Logo, Button, HeroSection }
+export { Navbar, ToogleBtn, Input, Logo, Button, HeroSection, TrendingCoins }
