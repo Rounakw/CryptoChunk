@@ -53,7 +53,7 @@ function Navbar() {
   }
 
   return (
-    <div className='flex bg-slate-200 dark:bg-gray-700 items-center justify-between px-10 py-4 dark:border-b-[1px] dark:border-b-white'>
+    <div className='flex bg-slate-200 dark:bg-slate-900 items-center justify-between px-10 py-4 dark:border-b-[1px] dark:border-b-white'>
       <Logo />
 
       <div className="flex max-2xl:gap-6 max-lg:gap-[15px] dark:text-white max-md:hidden">

@@ -13,10 +13,41 @@ function TrendingCoins() {
         speed: 500,
         autoplaySpeed: 3000,
         adaptiveHeight: true,
-        slidesToShow: 4,
-        slidesToScroll:2,
+        slidesToShow: 6,
+        slidesToScroll:3,
         waitForAnimate: false,
-        pauseOnHover: false
+        pauseOnHover: false,
+        responsive: [
+
+            {
+              breakpoint: 1280,
+              settings: {
+                slidesToShow: 6,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 5,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 5,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 640,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 2
+              }
+            },
+          ]
       };
     const URL = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&order=gecko_desc&sparkline=false&price_change_percentage=24h;'
 
@@ -33,10 +64,10 @@ function TrendingCoins() {
 
 
     return (
-        <div className="slider-container mx-10 m-auto my-5">
-      <Slider {...settings}>
+        <div className="slider-container mx-7 m-auto my-10 md:mx-16 xl:mx-24">
+      <Slider {...settings} id="slider">
             {
-                trendCoins?.slice(0,10).map((coinsData, idx) => {
+                trendCoins?.slice(0,15).map((coinsData, idx) => {
                     return <CoinCard name={coinsData.symbol} difference={coinsData.market_cap_change_percentage_24h} image={coinsData.image} price={coinsData.current_price}/>
                 })
             }

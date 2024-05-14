@@ -7,6 +7,7 @@ function App() {
       <Navbar/>
       <HeroSection/>
       <TrendingCoins/>
+      <hr />
     </>
   )
 }
