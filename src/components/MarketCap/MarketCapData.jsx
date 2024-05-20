@@ -11,7 +11,7 @@ function MarketCapData() {
         setPage(page-1)
     }
     function handleNextBtn(){
-        ref.current?.scrollIntoView({ behavior: "smooth" });
+        ref.current?.scrollIntoView({ behaniour: "smooth" });
         if(page===10) return;
         setPage(page+1)
     }
