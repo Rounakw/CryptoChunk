@@ -10,7 +10,7 @@ function MarketCapList({page},ref) {
         setData(data)
     }
     useEffect(() => {
-        getData()
+        // getData()
     }, [])
 
     return (
@@ -24,7 +24,7 @@ function MarketCapList({page},ref) {
             </div>
             <div className='tables flex flex-col gap-1'>
                 {data && data.slice(page * 10 - 10, page*10).map(data => {
-                    return <DataTuple name={data.symbol} image={data.image} price={data.current_price} high={data.price_change_percentage_24h} marketcap={data.market_cap_change_24h} fullname={data.name}/>
+                    return <DataTuple name={data.symbol} image={data.image} price={data.current_price} high={data.market_cap_change_percentage_24h} marketcap={data.market_cap_change_24h} fullname={data.name}/>
                 })}
                 
             </div>

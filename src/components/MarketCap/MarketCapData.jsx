@@ -6,13 +6,13 @@ function MarketCapData() {
     let [page, setPage] = useState(1)
     let ref  = useRef(null)
     function handlePrevBtn(){
-        ref.current?.scrollIntoView()
         if(page===1) return;
+        ref.current?.scrollIntoView()
         setPage(page-1)
     }
     function handleNextBtn(){
-        ref.current?.scrollIntoView();
         if(page===10) return;
+        ref.current?.scrollIntoView();
         setPage(page+1)
     }
     return (
@@ -20,9 +20,9 @@ function MarketCapData() {
             <MarketCapList page={page} ref={ref}/>
 
             <div className='flex items-center justify-center py-6'>
-                <Button text={"Prev"} onClick={handlePrevBtn} />
+                <Button style={page===1 && 'cursor-not-allowed'}  text={"Prev"} onClick={handlePrevBtn} />
                 <p className='mx-5 dark:text-white'> {page} of 10 </p>
-                <Button text={"Next"} onClick={handleNextBtn}/>
+                <Button style={page===10 && 'cursor-not-allowed'}  text={"Next"} onClick={handleNextBtn}/>
             </div>
         </div>
     )
