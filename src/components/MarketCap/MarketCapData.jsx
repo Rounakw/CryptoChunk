@@ -6,12 +6,12 @@ function MarketCapData() {
     let [page, setPage] = useState(1)
     let ref  = useRef(null)
     function handlePrevBtn(){
-        ref.current?.scrollIntoView({behaniour:"smooth"})
+        ref.current?.scrollIntoView({behavior:"smooth"})
         if(page===1) return;
         setPage(page-1)
     }
     function handleNextBtn(){
-        ref.current?.scrollIntoView({ behaniour: "smooth" });
+        ref.current?.scrollIntoView({ behavior: "smooth" });
         if(page===10) return;
         setPage(page+1)
     }
