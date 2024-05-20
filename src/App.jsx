@@ -1,5 +1,5 @@
 import './App.css'
-import { HeroSection, Navbar, TrendingCoins } from './components'
+import { HeroSection, MarketCapData, Navbar, TrendingCoins } from './components'
 function App() {
 
   return (
@@ -7,7 +7,7 @@ function App() {
       <Navbar/>
       <HeroSection/>
       <TrendingCoins/>
-      <hr />
+      <MarketCapData/>
     </>
   )
 }

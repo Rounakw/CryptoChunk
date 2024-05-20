@@ -5,5 +5,6 @@ import Logo from "./logo/Logo";
 import Button from "./button/Button";
 import HeroSection from "./herosection/HeroSection";
 import TrendingCoins from "./trendingcoins/TrendingCoins";
+import MarketCapData from "./MarketCap/MarketCapData";
 
-export { Navbar, ToogleBtn, Input, Logo, Button, HeroSection, TrendingCoins }
+export {Navbar, ToogleBtn, Input, Logo, Button, HeroSection, TrendingCoins, MarketCapData}

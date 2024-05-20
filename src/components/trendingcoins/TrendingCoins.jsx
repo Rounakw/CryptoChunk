@@ -64,6 +64,7 @@ function TrendingCoins() {
 
 
     return (
+      <>
         <div className="slider-container mx-7 m-auto my-10 md:mx-16 xl:mx-24">
       <Slider {...settings} id="slider">
             {
@@ -72,8 +73,9 @@ function TrendingCoins() {
                 })
             }
          </Slider>
+        
     </div>
-    )
-}
+     </>
+    )}
 
 export default TrendingCoins
