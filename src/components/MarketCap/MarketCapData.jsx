@@ -20,9 +20,9 @@ function MarketCapData() {
             <MarketCapList page={page} ref={ref}/>
 
             <div className='flex items-center justify-center py-6'>
-                <Button style={page===1 && 'cursor-not-allowed'}  text={"Prev"} onClick={handlePrevBtn} />
+                <Button style={page===1 && 'hidden sm:block sm:cursor-not-allowed'}  text={"Prev"} onClick={handlePrevBtn} />
                 <p className='mx-5 dark:text-white'> {page} of 10 </p>
-                <Button style={page===10 && 'cursor-not-allowed'}  text={"Next"} onClick={handleNextBtn}/>
+                <Button style={page===10 && 'hidden sm:block sm:cursor-not-allowed'}  text={"Next"} onClick={handleNextBtn}/>
             </div>
         </div>
     )
