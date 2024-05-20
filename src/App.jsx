@@ -6,7 +6,7 @@ function App() {
     <>
       <Navbar/>
       <HeroSection/>
-      <TrendingCoins/>
+      {/* <TrendingCoins/> */}
       <MarketCapData/>
     </>
   )

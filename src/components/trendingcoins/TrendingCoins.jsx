@@ -59,7 +59,7 @@ function TrendingCoins() {
         setTrendCoins(data)
     }
     useEffect(() => {
-        getTrendCoins()
+        // getTrendCoins()
     }, [])
 
 
