@@ -10,7 +10,7 @@ function MarketCapList({page},ref) {
         setData(data)
     }
     useEffect(() => {
-        // getData()
+        getData()
     }, [])
 
     return (
