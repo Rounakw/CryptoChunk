@@ -12,7 +12,7 @@ function CoinCard({name, image, price, difference}) {
       </div>
 
       {/* only for small devices */}
-      <span className={`text-[1.0999rem]  sm:hidden ${difference<0?"text-red-700":"text-green-700"}`}>{difference.toFixed(2)}%</span>
+      <span className={`text-[1.0999rem]  sm:hidden ${difference<0.0?"text-red-700":"text-green-700"}`}>{difference.toFixed(2)}%</span>
       
       <span className='hidden sm:block dark:text-white md:text-[1rem] font-[600]'>{price.toLocaleString('en-IN', { style: 'currency', currency: 'INR' })}</span>
     </div>
