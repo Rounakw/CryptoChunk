@@ -5,7 +5,7 @@ import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';  // Import the default styling
+import 'react-toastify/dist/ReactToastify.css'; 
 import axios from 'axios';
 import Loading from '../loading/Loading';
 
@@ -160,7 +160,7 @@ function RegisterModal({ setRegisterModalOpen }) {
                                     name="userName"
                                     id="userName"
                                     className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="john@12"
+                                    placeholder="john@123"
                                     value={formData.userName}
                                     onChange={handleChangeInput}
                                 />
