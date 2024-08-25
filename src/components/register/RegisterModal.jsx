@@ -64,7 +64,7 @@ function RegisterModal({ setRegisterModalOpen }) {
         setLoading(true)
 
         try {
-            let response = await axios.post('https://cryptochunkbackend-1.onrender.com/api/user/register', { email: formData.email, userName: formData.userName, password: formData.password })
+            let response = await axios.post('https://cryptochunkbackend-1.onrender.com//api/user/register', { email: formData.email, userName: formData.userName, password: formData.password })
             if (response.data.success) {
                 toast.success(response.data.message)
                 setFormData({
@@ -102,6 +102,8 @@ function RegisterModal({ setRegisterModalOpen }) {
                 }))
             }
         } catch (error) {
+
+
             toast.error(error.response.data.message)
         } finally {
             setLoading(false)
