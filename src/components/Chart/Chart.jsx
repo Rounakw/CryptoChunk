@@ -31,7 +31,7 @@ function Chart() {
   }, [id]);
 
   const chartData = {
-    labels: data.map((item) => new Date(item[0]).toLocaleTimeString()),
+    labels: data.map((item) => new Date(item[0]).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })),
     datasets: [
       {
         label: `${id} Price (INR)`,
@@ -60,13 +60,13 @@ function Chart() {
     scales: {
       x: {
         title: {
-          display: true,
+          display: false,
           text: 'Time',
         },
       },
       y: {
         title: {
-          display: true,
+          display: false,
           text: 'Price (INR)',
         },
       },
@@ -74,7 +74,7 @@ function Chart() {
   };
 
   return (
-    <div className="w-full h-[400px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[500px] xl:w-[50rem] p-4 ">
+    <div className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[500px] xl:w-[50rem] p-4 ">
       <div className="h-full w-full">
         {data.length > 0 ? (
           <Line data={chartData} options={options} />
