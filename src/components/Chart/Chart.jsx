@@ -23,7 +23,7 @@ function Chart() {
     const url = `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=inr&days=1`;
     const response = await fetch(url);
     const data = await response.json();
-    setData(data.prices); 
+    setData(data.prices);
   }
 
   useEffect(() => {
@@ -34,13 +34,13 @@ function Chart() {
     labels: data.map((item) => new Date(item[0]).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })),
     datasets: [
       {
-        label: `${id} Price (INR)`,
-        data: data.map((item) => item[1]), 
+        label: `Price (Past 1 Days ) in INR`,
+        data: data.map((item) => item[1]),
         borderColor: '#F3BA2F',
         backgroundColor: 'rgba(243, 186, 47, 0.2)',
         fill: true,
         tension: 0,
-        pointRadius: 1,  
+        pointRadius: 1,
       },
     ],
   };
@@ -51,11 +51,7 @@ function Chart() {
     plugins: {
       legend: {
         position: 'top',
-      },
-      title: {
-        display: true,
-        text: `Price of ${id} (Last 24 Hours)`,
-      },
+      }
     },
     scales: {
       x: {
