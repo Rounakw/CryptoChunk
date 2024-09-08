@@ -1,7 +1,7 @@
 import React, { forwardRef, useEffect, useState } from 'react'
 import DataTuple from './DataTuple';
 
-function MarketCapList({page},ref) {
+function MarketCapList({ page }, ref) {
     let [data, setData] = useState()
     let url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&order=market_cap_desc&per_page=100&page=1&sparkline=false;'
     async function getData() {
@@ -23,10 +23,10 @@ function MarketCapList({page},ref) {
                 <p className='hidden sm:block text-sm font-semibold lg:text-lg'>Market Cap</p>
             </div>
             <div className='tables flex flex-col gap-1'>
-                {data && data.slice(page * 10 - 10, page*10).map((data, idx) => {
-                    return <DataTuple key={idx} name={data.symbol} image={data.image} price={data.current_price} high={data.market_cap_change_percentage_24h} marketcap={data.market_cap_change_24h} fullname={data.name}/>
+                {data && data.slice(page * 10 - 10, page * 10).map((data, idx) => {
+                    return <DataTuple key={idx} name={data.symbol} id={data.id} image={data.image} price={data.current_price} high={data.market_cap_change_percentage_24h} marketcap={data.market_cap_change_24h} fullname={data.name} />
                 })}
-                
+
             </div>
         </div>
     )
